@@ -1,13 +1,13 @@
 import os
 from dotenv import load_dotenv
-from pydantic_settings import BaseSettings
+from pydantic import BaseConfig
 from utils import path
 from appium.options.android import UiAutomator2Options
 
 load_dotenv()
 
 
-class Config(BaseSettings):
+class Config(BaseConfig):
     USER_NAME: str = os.getenv('USER_NAME')
     ACCESS_KEY: str = os.getenv('ACCESS_KEY')
     TIMEOUT: float = float(os.getenv('TIMEOUT', '10'))

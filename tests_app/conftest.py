@@ -1,7 +1,7 @@
 import pytest
 import allure
 from dotenv import load_dotenv
-from utils import allure
+from utils import attach
 from appium import webdriver
 from selene import browser
 
@@ -29,11 +29,11 @@ def mobile_management(request):
     yield
 
     with allure.step('Add screenshot'):
-        allure.add_screenshot(browser)
+        attach.add_screenshot(browser)
 
     if context == 'bstack':
         with allure.step('Add video'):
-            allure.add_video(browser)
+            attach.add_video(browser)
 
     with allure.step('Close driver'):
         browser.quit()
