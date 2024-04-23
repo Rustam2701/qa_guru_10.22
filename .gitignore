@@ -121,6 +121,7 @@ celerybeat.pid
 
 # Environments
 .env.bstack
+.env
 .env.emulator_local
 .venv
 env/
