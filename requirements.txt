@@ -5,3 +5,4 @@ Appium-Python-Client~=4.0.0
 python-dotenv~=1.0.1
 config~=0.5.1
 requests~=2.31.0
+pydantic-settings==2.2.1
